@@ -464,6 +464,38 @@ nav {
     margin-top: 1px;
 }
 
+.rheader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.rauthor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.rname {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.rmeta {
+    font-size: 0.72rem;
+    color: var(--taupe);
+}
+
+.rtext {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--taupe);
+    font-style: italic;
+    font-family: "Fraunces", serif;
+    font-weight: 300;
+}
+
 /* Legal stuff from tos and pp */
 .legal {
     max-width: 1180px;

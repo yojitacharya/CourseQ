@@ -10,6 +10,10 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="style.css" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script type="text/javascript">
+            emailjs.init("dKq1jTER0XHEs8g-R");
+        </script>
     </head>
     <body>
         <!-- NAV -->
@@ -45,7 +49,9 @@
                     </a>
                     <a href="#" class="store-btn light" id="play-link">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055zM1 13.396V2.603L6.846 8zM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27" />
+                            <path
+                                d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055zM1 13.396V2.603L6.846 8zM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27"
+                            />
                         </svg>
                         <span class="btn-inner">
                             <small>Get it on</small>
@@ -70,7 +76,7 @@
                         <div class="mock-course">
                             <div class="mock-check"></div>
                             <div class="mock-dot" style="background: #dccca3"></div>
-                            <div class="mock-course-name"> Comp II — Reading Response</div>
+                            <div class="mock-course-name">Comp II — Reading Response</div>
                             <div class="mock-due">Due 3pm</div>
                         </div>
                         <div class="mock-course">
@@ -135,47 +141,11 @@
             </div>
         </section>
 
-        <!-- REVIEWS -->
+        <!-- reviews that take input from reviews.csv can update when needed -->
         <section class="reviews" id="reviews">
             <p class="reviews-label">What students are saying</p>
             <div class="reviews-scroller">
-                <div class="reviews-track">
-                    <!-- Set 1 -->
-                    <div class="rcard">
-                        <div class="rcard-stars">★★★★★</div>
-                        <p class="rcard-text">"Example."</p>
-                        <div class="rcard-footer">
-                            <div class="rcard-avatar" style="background: #610e87">LL</div>
-                            <div>
-                                <div class="rcard-name">Landon L.</div>
-                                <div class="rcard-role">Sophomore · Pre-Med</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rcard">
-                        <div class="rcard-stars">★★★★★</div>
-                        <p class="rcard-text">"Example 2."</p>
-                        <div class="rcard-footer">
-                            <div class="rcard-avatar" style="background: #5c5560">LL</div>
-                            <div>
-                                <div class="rcard-name">Landon L.</div>
-                                <div class="rcard-role">Sophomore · Pre-Med</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rcard">
-                        <div class="rcard-stars">★★★★★</div>
-                        <p class="rcard-text">"Example 3."</p>
-                        <div class="rcard-footer">
-                            <div class="rcard-avatar" style="background: #5c5560">LL</div>
-                            <div>
-                                <div class="rcard-name">Landon L.</div>
-                                <div class="rcard-role">Sophomore · Pre-Med</div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+                <div class="reviews-track" id="rcard-container"></div>
             </div>
         </section>
 
@@ -228,12 +198,11 @@
                     <h2>Have a question?<br /><em>We have the answer.</em></h2>
                     <p>Whether it's feedback, a support question, or a partnership inquiry — send us a message and we'll get back to you within 48 hours.</p>
                     <div class="contact-detail">
-                                                <a href="mailto:support@course-q.com">support@course-q.com</a>
+                        <a href="mailto:support@course-q.com">support@course-q.com</a>
                         <p>Email us directly</p>
 
-                                                <a href="https://www.instagram.com/courseqdevs/">@courseqdevs</a>
-                        <p> Find us on Instagram </p>
-
+                        <a href="https://www.instagram.com/courseqdevs/">@courseqdevs</a>
+                        <p>Find us on Instagram</p>
                     </div>
                 </div>
                 <div>
@@ -276,7 +245,7 @@
 
         <!-- FOOTER -->
         <footer>
-            <br>
+            <br />
             <div class="footer-links">
                 <a
                     href="#"
@@ -303,36 +272,44 @@
             <div class="modal-box">
                 <button class="modal-close-btn" onclick="closeModal('pp')">✕</button>
                 <h2>Privacy Policy</h2>
-                <p class="modal-updated">Last updated January 1, 2025</p>
+                <p class="modal-updated">Last updated April 27, 2026</p>
 
-                <p>Quast Ventures LLC (“the Company”, “we”, "us", or “our”) operates the CourseQ mobile application and website (the “Service”). We are committed to protecting your privacy and ensuring you understand how your data is handled.
-                1. OUR "LOCAL-FIRST" PRIVACY PHILOSOPHY
-                Unlike traditional cloud-based applications, our Service is designed with a "Local-First" architecture. We believe that your academic data belongs to you. We do not store your course content, syllabi, or any other applied study materials on our servers.
-                2. INFORMATION COLLECTION AND STORAGE
-                Because the Service operates primarily on your local device, our data handling practices are as follows:
-                Local Storage: All data you input, upload, or generate—including uploaded syllabi (PDFs/Images), parsed course schedules, AI-generated summaries, and flashcards—is stored locally on your device or within your private personal cloud storage (such as iCloud or Google Drive) linked to your device account.
-                No Central Database: We do not maintain a central database of your academic materials. We cannot access, read, or sell your syllabi or flashcards because we do not possess them.
-                AI Processing: To provide the "AI Syllabus Assistant" features, the Service transmits document text to third-party AI processors (such as OpenAI). This data is transmitted securely and is used solely to parse and organize your syllabus. It is not retained by us after the processing is complete.
-                3. USE OF INFORMATION
-                Since we do not collect your personal academic data on our servers, we do not use it for marketing or profiling. Any data processed locally or via API is used strictly to:
-                Extract dates, assignments, and grade weights from your uploaded documents.
-                Generate flashcards and study aids based on your specific requests.
-                Maintain the functionality of the Service on your local device.
-                4. DATA SECURITY
-                Because your data is stored locally, the security of your information depends on the security of your hardware and your personal cloud accounts.
-                User Responsibility: You are responsible for maintaining the security of your device (using passcodes or biometrics) and your linked accounts (using strong passwords and two-factor authentication).
-                Unauthorized Access: As stated in our Terms of Service, the Company is not responsible for unauthorized access resulting from the hacking, tampering, or loss of your personal device.
-                5. THIRD-PARTY SERVICES
-                Our Service utilizes third-party APIs (such as AI processing engines). We are not responsible for the privacy practices of these external entities. We encourage you to review the privacy policies of any third-party service providers used by the app such as third-party calendars or OpenAI.
-                6. CHILDREN'S PRIVACY
-                The Service is intended for use by students in higher education. We do not knowingly collect personal information from children under the age of 13. If you believe a child has provided us with personal information, please contact us immediately.
-                7. CHANGES TO THIS PRIVACY POLICY
-                We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this policy.
-                8. CONTACT US
-                If you have any questions about this Privacy Policy, please contact us at:
-                Support@Course-Q.com
-
-</p>
+                <p>
+                    Quast Ventures LLC ("the Company", "we", "us", or "our") operates the CourseQ mobile application and website (the "Service"). We are
+                    committed to protecting your privacy and ensuring you understand how your data is handled. 1. OUR "LOCAL-FIRST" PRIVACY PHILOSOPHY Unlike
+                    traditional cloud-based applications, our Service is designed with a "Local-First" architecture. We believe that your academic data belongs
+                    to you. We do not store your course content, syllabi, or any other applied study materials on our servers. 2. INFORMATION COLLECTION AND
+                    STORAGE Because the Service operates primarily on your local device, our data handling practices are as follows: Local Storage: All data you
+                    input, upload, or generate—including uploaded syllabi (PDFs/Images), parsed course schedules, AI-generated summaries, and flashcards—is
+                    stored locally on your device or within your private personal cloud storage (such as iCloud or Google Drive) linked to your device account.
+                    No Central Database: We do not maintain a central database of your academic materials. We cannot access, read, or sell your syllabi or
+                    flashcards because we do not possess them. AI Processing: To provide the "AI Syllabus Assistant" features, the Service transmits document
+                    text to third-party AI processors (such as OpenAI). This data is transmitted securely and is used solely to parse and organize your
+                    syllabus. It is not retained by us after the processing is complete. 3. USE OF INFORMATION Since we do not collect your personal academic
+                    data on our servers, we do not use it for marketing or profiling. Any data processed locally or via API is used strictly to: Extract dates,
+                    assignments, and grade weights from your uploaded documents. Generate flashcards and study aids based on your specific requests. Maintain
+                    the functionality of the Service on your local device. 4. DATA SECURITY Because your data is stored locally, the security of your
+                    information depends on the security of your hardware and your personal cloud accounts. User Responsibility: You are responsible for
+                    maintaining the security of your device (using passcodes or biometrics) and your linked accounts (using strong passwords and two-factor
+                    authentication). Unauthorized Access: As stated in our Terms of Service, the Company is not responsible for unauthorized access resulting
+                    from the hacking, tampering, or loss of your personal device. 5. THIRD-PARTY SERVICES Our Service utilizes third-party APIs (such as AI
+                    processing engines). We are not responsible for the privacy practices of these external entities. We encourage you to review the privacy
+                    policies of any third-party service providers used by the app such as third-party calendars or OpenAI. 6. CHILDREN'S PRIVACY The Service is
+                    intended for use by students in higher education. We do not knowingly collect personal information from children under the age of 13. If you
+                    believe a child has provided us with personal information, please contact us immediately. To support optional Study Group collaboration
+                    features, CourseQ may store limited collaboration data in our secure backend (Supabase). This includes group membership, shared course items
+                    (such as assignments and due dates), group task progress signals, shared flashcard deck content, and group study timer logs needed to keep
+                    members in sync across devices. We do not sell your data. Collaboration data is used only to operate collaboration features you choose to
+                    use, and is protected with industry-standard safeguards, including encryption in transit and at rest where supported by our providers.
+                    Access to collaboration records is restricted to authenticated group members and authorized service operations. Core personal app usage
+                    remains privacy-first. Features that are local-only (for example, non-group personal workflows) continue to stay on your device unless you
+                    explicitly use a collaboration feature that requires syncing. If you do not join or create a Study Group, collaboration storage is not used
+                    for your account. You can leave a group at any time. When collaboration data is no longer needed, you may request deletion of your
+                    collaboration records, and we will process deletion in accordance with applicable law and our retention requirements. 7. CHANGES TO THIS
+                    PRIVACY POLICY We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on
+                    this page and updating the "Last Updated" date at the top of this policy. 8. CONTACT US If you have any questions about this Privacy Policy,
+                    please contact us at: Support@Course-Q.com
+                </p>
             </div>
         </div>
 
@@ -343,42 +320,41 @@
                 <p class="modal-updated">Last updated April 21, 2026</p>
 
                 <p>
-                Please read these Terms of Service (“Terms”) carefully before using CourseQ (the “Service”), operated by Quast Ventures LLC (“Company,” “we,” “us,” or “our”). By accessing the Service, you agree to be bound by these Terms.
-
-                The Service is intended for personal, organizational use only. Users represent and warrant that they have the necessary permissions to upload documents for the purpose of personal scheduling. CourseQ does not claim any ownership over uploaded content and does not use such content for any purpose other than providing the requested output to the User
-                All extracted data and calendar entries generated by the Service are the property of the User. Quast Ventures LLC claims no rights or royalties over the schedules created using our tools.
-                1. AI-Powered Data Extraction & Accuracy Disclaimer
-                The Service utilizes artificial intelligence to parse and extract schedule information from uploaded documents (Syllabi, notes, and other applicable information).
-                No Guarantee of Accuracy: We do not guarantee 100% accuracy of parsed data. AI may misinterpret dates, times, or text.
-                User Responsibility: You are solely responsible for verifying all parsed dates, deadlines, and schedule information against your official syllabus.
-                No Academic Liability: CourseQ is not responsible for any academic penalties, missed exams, late assignments, or failing grades resulting from errors in data extraction.
-
-                2. One-Way Calendar Synchronization
-                The Service offers a feature to export data to third-party calendar applications (e.g., Google Calendar, Microsoft Outlook).
-                One-Way Push: Synchronization is a one-way transfer. Changes made in the Service after a sync will not automatically update or delete entries in your external calendar.
-                Duplicate Entries: We are not liable for the creation of duplicate calendar entries. It is your responsibility to manage and clean your external calendar.
-                Data Modification: By using the "Syllabus Upload" feature, you grant the Service permission to write events to your connected third-party calendar. We are not liable for unintended deletions or modifications to your existing calendar data.
-                3. Paid Services & Subscriptions
-                Access to certain features, including calendar synchronization, requires a paid subscription.
-                "As-Is" Service: Payment for "Premium" features does not guarantee error-free parsing. You are paying for access to automation tools, not a guarantee of academic oversight.
-                Service Interruption: We rely on third-party APIs (Google/Microsoft). We are not liable for "silent failures" or downtime caused by these third-party providers.
-                Refund Policy: All sales are final. Refunds for service interruptions are granted at our sole discretion.
-                4. Limitation of Liability (The Liability Cap)
-                To the maximum extent permitted by law, in no event shall Quast Ventures LLC be liable for any indirect, incidental, or consequential damages.
-                Financial Cap: Our total liability for any claim arising out of your use of the Service—whether free or paid—shall not exceed the total amount paid by you to the Company immediately preceding the claim.
-                5. Data Privacy & Zero-Retention Policy
-                Non-Retention: Our Service is built on a non-retention framework. We do not store, host, or keep copies of uploaded syllabi. Once the AI parsing is finalized and the data is presented to the user, the uploaded file is permanently deleted from our temporary processing memory.
-                No Training: We do not use your data, syllabi, or schedules to train our AI models or for any secondary commercial purpose.
-                User Responsibility: Because we do not store your documents, Quast Ventures LLC cannot 'recover' a lost syllabus for you. It is your responsibility to maintain your own copies of all academic materials.
-
-                All materials presented by CourseQ functionality are subject to our DMCA Takedown Policy
-                6. Mandatory Arbitration & Governing Law
-                Governing Law: These Terms shall be governed by the laws of the State of Arkansas, without regard to its conflict of law provisions.
-                Dispute Resolution: Any dispute arising from these terms shall be resolved through binding arbitration in Hot Springs, Arkansas. You waive your right to participate in a class-action lawsuit.
-
-                7. Acknowledgment
-                BY CLICKING "I AGREE" OR BY UPLOADING A SYLLABUS, YOU ACKNOWLEDGE THAT YOU HAVE READ THESE TERMS AND AGREE TO BE BOUND BY THEM, SPECIFICALLY ACKNOWLEDGING THAT THE FINAL RESPONSIBILITY FOR ACADEMIC DEADLINES RESTS WITH YOU, THE USER.
-
+                    Please read these Terms of Service ("Terms") carefully before using CourseQ (the "Service"), operated by Quast Ventures LLC ("Company,"
+                    "we," "us," or "our"). By accessing the Service, you agree to be bound by these Terms. The Service is intended for personal, organizational
+                    use only. Users represent and warrant that they have the necessary permissions to upload documents for the purpose of personal scheduling.
+                    CourseQ does not claim any ownership over uploaded content and does not use such content for any purpose other than providing the requested
+                    output to the User All extracted data and calendar entries generated by the Service are the property of the User. Quast Ventures LLC claims
+                    no rights or royalties over the schedules created using our tools. 1. AI-Powered Data Extraction & Accuracy Disclaimer The Service utilizes
+                    artificial intelligence to parse and extract schedule information from uploaded documents (Syllabi, notes, and other applicable
+                    information). No Guarantee of Accuracy: We do not guarantee 100% accuracy of parsed data. AI may misinterpret dates, times, or text. User
+                    Responsibility: You are solely responsible for verifying all parsed dates, deadlines, and schedule information against your official
+                    syllabus. No Academic Liability: CourseQ is not responsible for any academic penalties, missed exams, late assignments, or failing grades
+                    resulting from errors in data extraction. 2. One-Way Calendar Synchronization The Service offers a feature to export data to third-party
+                    calendar applications (e.g., Google Calendar, Microsoft Outlook). One-Way Push: Synchronization is a one-way transfer. Changes made in the
+                    Service after a sync will not automatically update or delete entries in your external calendar. Duplicate Entries: We are not liable for the
+                    creation of duplicate calendar entries. It is your responsibility to manage and clean your external calendar. Data Modification: By using
+                    the "Syllabus Upload" feature, you grant the Service permission to write events to your connected third-party calendar. We are not liable
+                    for unintended deletions or modifications to your existing calendar data. 3. Paid Services & Subscriptions Access to certain features,
+                    including calendar synchronization, requires a paid subscription. "As-Is" Service: Payment for "Premium" features does not guarantee
+                </p>
+                <p>
+                    error-free parsing. You are paying for access to automation tools, not a guarantee of academic oversight. Service Interruption: We rely on
+                    third-party APIs (Google/Microsoft). We are not liable for "silent failures" or downtime caused by these third-party providers. Refund
+                    Policy: All sales are final. Refunds for service interruptions are granted at our sole discretion. 4. Limitation of Liability (The Liability
+                    Cap) To the maximum extent permitted by law, in no event shall Quast Ventures LLC be liable for any indirect, incidental, or consequential
+                    damages. Financial Cap: Our total liability for any claim arising out of your use of the Service—whether free or paid—shall not exceed the
+                    total amount paid by you to the Company immediately preceding the claim. 5. Data Privacy & Zero-Retention Policy Non-Retention: Our Service
+                    is built on a non-retention framework. We do not store, host, or keep copies of uploaded syllabi. Once the AI parsing is finalized and the
+                    data is presented to the user, the uploaded file is permanently deleted from our temporary processing memory. No Training: We do not use
+                    your data, syllabi, or schedules to train our AI models or for any secondary commercial purpose. User Responsibility: Because we do not
+                    store your documents, Quast Ventures LLC cannot 'recover' a lost syllabus for you. It is your responsibility to maintain your own copies of
+                    all academic materials. All materials presented by CourseQ functionality are subject to our DMCA Takedown Policy 6. Mandatory Arbitration &
+                    Governing Law Governing Law: These Terms shall be governed by the laws of the State of Arkansas, without regard to its conflict of law
+                    provisions. Dispute Resolution: Any dispute arising from these terms shall be resolved through binding arbitration in Hot Springs, Arkansas.
+                    You waive your right to participate in a class-action lawsuit. 7. Acknowledgment BY CLICKING "I AGREE" OR BY UPLOADING A SYLLABUS, YOU
+                    ACKNOWLEDGE THAT YOU HAVE READ THESE TERMS AND AGREE TO BE BOUND BY THEM, SPECIFICALLY ACKNOWLEDGING THAT THE FINAL RESPONSIBILITY FOR
+                    ACADEMIC DEADLINES RESTS WITH YOU, THE USER.
                 </p>
             </div>
         </div>
@@ -411,8 +387,58 @@
                 }
                 document.getElementById("contactForm").style.display = "none";
                 document.getElementById("sentMsg").style.display = "block";
-                //Build functionality for an actual email sending service here when possible (SMTP or something idk)
+
+                emailjs
+                    .send("service_lgcy1ui", "template_9849ohr", {
+                        name: name,
+                        email: email,
+                        msg: msg,
+                    })
+                    .then(() => {
+                        alert("Message sent successfully!");
+                    })
+                    .catch((error) => {
+                        alert("Failed to send message: " + error);
+                    });
             }
+
+            async function loadReviews() {
+                const container = document.getElementById("rcard-container");
+
+                try {
+                    const response = await fetch("files/reviews.csv");
+                    const data = await response.text();
+
+                    const rows = data.split("\n").slice(1);
+
+                    rows.forEach((row) => {
+                        const cols = row.split("|");
+
+                        const name = cols[0];
+                        const initials = cols[1];
+                        const major = cols[2];
+                        const text = cols[3];
+                        const color = cols[4];
+
+                        const cardHTML = `
+                          <div class="rcard">
+                                      <div class="rheader">
+                                          <div class="rauthor-info">
+                                              <h4 class="rname">${name}</h4>
+                                              <p class="rmeta">${major}</p>
+                                          </div>
+                                      </div>
+                                      <p class="rtext">"${text}"</p>
+                                  </div>
+                              `;
+
+                        container.innerHTML += cardHTML;
+                    });
+                } catch (error) {
+                    console.error("review loading csv error", error);
+                }
+            }
+            loadReviews();
         </script>
     </body>
 </html>
