@@ -89,7 +89,7 @@ body {
 /* nav */
 nav {
     position: fixed;
-    top: 0;
+    top: 36px;
     left: 0;
     right: 0;
     z-index: 90;
@@ -152,7 +152,7 @@ nav {
 
 /* hero can be cahnged if we get img may be better */
 .hero {
-    padding: 140px 3rem 80px;
+    padding: 176px 3rem 80px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
@@ -981,10 +981,10 @@ footer img {
     color: var(--indigo);
 }
 
-/* anims */
+
 @media (max-width: 900px) {
     nav {
-        padding: 0 1.5rem;
+        padding: 52px 1.5rem;
     }
     .nav-links {
         gap: 1.5rem;
@@ -995,7 +995,7 @@ footer img {
 
     .hero {
         grid-template-columns: 1fr;
-        padding: 120px 1.5rem 4rem;
+        padding: 192px 1.5rem 4rem;
         min-height: auto;
         gap: 3rem;
     }
