@@ -34,6 +34,58 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.announce-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: linear-gradient(90deg, #1c1020 0%, #2e1640 100%);
+    color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.55rem 3rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(190, 149, 196, 0.25);
+}
+
+.announce-pill {
+    background: var(--indigo);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 999px;
+    flex-shrink: 0;
+}
+
+.announce-text a {
+    color: var(--lilac);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.announce-close {
+    position: absolute;
+    right: 1.25rem;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.1rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.2rem 0.4rem;
+    transition: color 0.15s;
+}
+.announce-close:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
 /* nav */
 nav {
     position: fixed;
