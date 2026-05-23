@@ -25,7 +25,7 @@
         <div class="announce-bar">
             <span class="announce-pill">Beta</span>
             <span class="announce-text">Summer school students get early access. Join the beta and shape CourseQ for the fall semester!</span>
-            <button class="announce-close" onclick="this.parentElement.style.display='none'" aria-label="Dismiss">&times;</button>
+            <button class="announce-close" onclick="closeAnnounce()" aria-label="Dismiss">&times;</button>
         </div>
         <!-- NAV -->
         <nav>
@@ -406,6 +406,15 @@ Free-tier limits.
                     .catch((error) => {
                         alert("Failed To Send Message: " + error);
                     });
+            }
+
+            function closeAnnounce() {
+                const bar = document.querySelector('.announce-bar');
+                const nav = document.querySelector('nav');
+                const hero = document.querySelector('.hero');
+                bar.style.display = 'none';
+                nav.style.top = '0';
+                hero.style.paddingTop = '140px';
             }
 
         </script>
