@@ -2,8 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CourseQ © | Official Site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <title>CourseQ — Plan, Connect, and Thrive on Campus</title>
+        <meta
+            name="description"
+            content="CourseQ helps students plan coursework with AI syllabus tools, join Study Groups, connect on Campus Hub, buy and sell on Marketplace, and more."
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
             href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,300;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap"
@@ -15,18 +19,24 @@
         <link rel="icon" type="image/png" sizes="32x32" href="logo.png" />
         <link rel="icon" type="image/png" sizes="192x192" href="logo.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="logo.png" />
-        <meta name="theme-color" content="#1c1020" />
+        <meta name="theme-color" content="#610e87" />
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script type="text/javascript">
             emailjs.init("dKq1jTER0XHEs8g-R");
         </script>
     </head>
     <body>
-        <!-- NAV -->
         <nav>
-            <a class="nav-logo" href="#"><img src="logo.png" alt="CourseQ" /></a>
-            <ul class="nav-links">
+            <a class="nav-logo" href="/"><img src="logo.png" alt="CourseQ" /></a>
+            <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#legal">Legal</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -35,68 +45,94 @@
 
         <!-- HERO -->
         <section class="hero">
-            <div class="hero-left">
-                <span class="eyebrow">Academic Planner</span>
-                <h1>Stay On Top<br />Of <em>Every</em> Course,<br />Every Time.</h1>
-                <p class="hero-desc">
-                    Upload Once, Then Let CourseQ Organize Assignments, Exams, And Study Time In One Place So You Can Focus On Grades Instead Of Logistics.
-                </p>
-                <div class="store-buttons">
-                    <a href="https://apps.apple.com/us/app/courseq/id6768486674" class="store-btn dark" id="appstore-link">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"
-                            />
-                        </svg>
-                        <span class="btn-inner">
-                            <small>Download On The</small>
-                            App Store
-                        </span>
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.quastventures.courseq&hl=en_US" class="store-btn light" id="play-link">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055zM1 13.396V2.603L6.846 8zM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27"
-                            />
-                        </svg>
-                        <span class="btn-inner">
-                            <small>Get It On</small>
-                            Google Play
-                        </span>
-                    </a>
-                    <!-- tuff -->
+            <div class="hero-bg" aria-hidden="true">
+                <div class="hero-orb hero-orb--1"></div>
+                <div class="hero-orb hero-orb--2"></div>
+            </div>
+
+            <div class="hero-visual-col">
+                <div class="phone-cluster" aria-hidden="true">
+                    <div class="phone-mockup phone-mockup--back phone-mockup--back-left">
+                        <div class="phone-frame">
+                            <div class="phone-island"></div>
+                            <div class="phone-screen">
+                                <img
+                                    class="phone-screenshot"
+                                    src="assets/screenshots/campus-hub.png"
+                                    alt=""
+                                    width="473"
+                                    height="1024"
+                                    loading="eager"
+                                    decoding="async"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-mockup phone-mockup--front phone-mockup--study">
+                        <div class="phone-frame">
+                            <div class="phone-island"></div>
+                            <div class="phone-screen">
+                                <img
+                                    class="phone-screenshot"
+                                    src="assets/screenshots/weekly-plan.png"
+                                    alt="CourseQ weekly study plan"
+                                    width="473"
+                                    height="1024"
+                                    loading="eager"
+                                    decoding="async"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-mockup phone-mockup--back phone-mockup--back-right">
+                        <div class="phone-frame">
+                            <div class="phone-island"></div>
+                            <div class="phone-screen">
+                                <img
+                                    class="phone-screenshot"
+                                    src="assets/screenshots/flashcards.png"
+                                    alt=""
+                                    width="514"
+                                    height="1024"
+                                    loading="eager"
+                                    decoding="async"
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- fake mockup of what i thought the app looked like -->
-            <div class="hero-right">
-                <div class="hero-visual">
-                    <img src="logo.png" alt="CourseQ" />
-                    <div class="mock-ui">
-                        <div class="mock-header">Today's Assignments</div>
-                        <div class="mock-course">
-                            <div class="mock-check done"></div>
-                            <div class="mock-dot" style="background: #610e87"></div>
-                            <div class="mock-course-name">Calculus I - Differentiation Homework</div>
-                            <div class="mock-due" style="color: #be95c4">Done</div>
-                        </div>
-                        <div class="mock-course">
-                            <div class="mock-check"></div>
-                            <div class="mock-dot" style="background: #dccca3"></div>
-                            <div class="mock-course-name">Comp II — Reading Response</div>
-                            <div class="mock-due">Due 3pm</div>
-                        </div>
-                        <div class="mock-course">
-                            <div class="mock-check"></div>
-                            <div class="mock-dot" style="background: #5c5560"></div>
-                            <div class="mock-course-name">Organic Chemistry — Lab Report</div>
-                            <div class="mock-due">Due 11pm</div>
-                        </div>
-                        <div class="mock-course">
-                            <div class="mock-check"></div>
-                            <div class="mock-dot" style="background: #be95c4"></div>
-                            <div class="mock-course-name">Intro To Psychology - Amygdala Worksheet</div>
-                            <div class="mock-due">Tomorrow</div>
-                        </div>
+
+            <div class="hero-copy-col">
+                <span class="eyebrow">Study Tools + Campus Life</span>
+                <h1>Your Semester.<br /><em>One App.</em></h1>
+                <p class="hero-desc">Plan with AI, connect on campus, and thrive — all scoped to your school.</p>
+                <div class="hero-actions">
+                    <div class="store-buttons">
+                        <a href="https://apps.apple.com/us/app/courseq/id6768486674" class="store-btn dark" id="appstore-link" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                            </svg>
+                            <span class="btn-inner"><small>Download on the</small>App Store</span>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.quastventures.courseq" class="store-btn light" id="play-link" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055zM1 13.396V2.603L6.846 8zM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27"/>
+                            </svg>
+                            <span class="btn-inner"><small>Get it on</small>Google Play</span>
+                        </a>
+                    </div>
+                    <div class="social-links social-links--hero">
+                        <a href="https://www.instagram.com/courseqdevs/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Follow CourseQ on Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/share/1SZHM7Wkpw/?mibextid=wwXIfr" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Follow CourseQ on Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -106,96 +142,319 @@
 
         <!-- FEATURES -->
         <section class="features" id="features">
-            <div class="features-header">
-                <h2>
-                    Built For <br />Students Who Want <br />
-                    <em>Clarity</em> And Consistency.
-                    <!-- Maybe change this to be mroe appealing somehow -->
-                </h2>
-                <p>From Syllabus To Study Sessions, Everything Stays In One Focused Workflow So You Always Know What To Do Next.</p>
+            <div class="features-header reveal">
+                <h2>Built for <em>Your Semester</em></h2>
+                <p>Study planning first — plus campus social, marketplace, and more.</p>
             </div>
-            <div class="features-list">
-                <div class="feat">
-                    <div class="feat-num">01</div>
-                    <h3>Focused Schedule</h3>
-                        <p>Every Class, Assignment, And Exam In One Place. See Your Whole Semester At A Glance Without Switching Between Books.</p>
-                </div>
-                <div class="feat">
-                    <div class="feat-num">02</div>
-                    <h3>Assignment Tracking</h3>
-                        <p>Check Things Off As You Complete Them. Know Where You Are At Any Given Moment So You Know Exactly Where To Work.</p>
-                </div>
-                <div class="feat">
-                    <div class="feat-num">03</div>
-                    <h3>Reminders</h3>
-                        <p>Get Notified When You Have An Important Assignment Or Exam Due. Never Accidentally Miss A Deadline Again.</p>
-                </div>
-                <div class="feat">
-                    <div class="feat-num">04</div>
-                    <h3>Easy To Get Started</h3>
-                        <p>Add Your Courses In Seconds: Download The App, Upload Your Syllabi, And You're Ready To Go.</p>
-                </div>
-                <div class="feat">
-                    <div class="feat-num">05</div>
-                    <h3>Automated Flashcards</h3>
-                        <p>Generate Flashcards From Your Notes And Materials Instantly. Get On Top Of Your Studying As Fast As Possible.</p>
-                </div>
-                <div class="feat">
-                    <div class="feat-num">06</div>
-                    <h3>Study Timer</h3>
-                        <p>Set A Timer For Your Study Sessions. Stay Focused And Finish Your Work On Time.</p>
-                </div>
+
+            <div class="bento-grid reveal-stagger">
+                <!-- Study Planning -->
+                <article class="bento-card bento-card--study">
+                    <div class="bento-visual bento-visual--study" aria-hidden="true">
+                        <div class="study-infographic">
+                            <div class="study-infographic-row">
+                                <svg class="study-papers-svg" viewBox="0 0 72 80" fill="none">
+                                    <rect x="4" y="18" width="52" height="58" rx="6" fill="rgba(97,14,135,0.05)" stroke="rgba(97,14,135,0.14)" stroke-width="1.5"/>
+                                    <rect x="10" y="10" width="52" height="58" rx="6" fill="rgba(97,14,135,0.08)" stroke="rgba(97,14,135,0.18)" stroke-width="1.5"/>
+                                    <rect x="16" y="4" width="52" height="58" rx="6" fill="#fff" stroke="rgba(97,14,135,0.28)" stroke-width="1.5"/>
+                                    <rect x="24" y="16" width="28" height="5" rx="2" fill="rgba(97,14,135,0.35)"/>
+                                    <rect x="24" y="28" width="36" height="3" rx="1.5" fill="rgba(92,85,96,0.14)"/>
+                                    <rect x="24" y="36" width="30" height="3" rx="1.5" fill="rgba(92,85,96,0.1)"/>
+                                    <rect x="24" y="44" width="34" height="3" rx="1.5" fill="rgba(92,85,96,0.1)"/>
+                                    <rect x="24" y="52" width="22" height="3" rx="1.5" fill="rgba(92,85,96,0.08)"/>
+                                </svg>
+                                <svg class="study-arrow-svg" viewBox="0 0 48 24" fill="none">
+                                    <path d="M4 12h32" stroke="rgba(97,14,135,0.4)" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M32 6l10 6-10 6" stroke="rgba(97,14,135,0.55)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <svg class="study-calendar-svg" viewBox="0 0 72 80" fill="none">
+                                    <rect x="6" y="10" width="60" height="66" rx="8" fill="rgba(190,149,196,0.12)" stroke="rgba(97,14,135,0.22)" stroke-width="1.5"/>
+                                    <rect x="6" y="10" width="60" height="18" rx="8" fill="rgba(97,14,135,0.18)"/>
+                                    <rect x="6" y="22" width="60" height="6" fill="rgba(97,14,135,0.18)"/>
+                                    <circle cx="22" cy="19" r="2" fill="rgba(255,255,255,0.5)"/>
+                                    <circle cx="36" cy="19" r="2" fill="rgba(255,255,255,0.5)"/>
+                                    <circle cx="50" cy="19" r="2" fill="rgba(255,255,255,0.5)"/>
+                                    <rect x="14" y="36" width="10" height="10" rx="2" fill="rgba(255,255,255,0.7)" stroke="rgba(97,14,135,0.12)" stroke-width="1"/>
+                                    <rect x="28" y="36" width="10" height="10" rx="2" fill="rgba(97,14,135,0.22)" stroke="rgba(97,14,135,0.2)" stroke-width="1"/>
+                                    <rect x="42" y="36" width="10" height="10" rx="2" fill="rgba(255,255,255,0.7)" stroke="rgba(97,14,135,0.12)" stroke-width="1"/>
+                                    <rect x="14" y="52" width="10" height="10" rx="2" fill="rgba(255,255,255,0.7)" stroke="rgba(97,14,135,0.12)" stroke-width="1"/>
+                                    <rect x="28" y="52" width="10" height="10" rx="2" fill="rgba(255,255,255,0.7)" stroke="rgba(97,14,135,0.12)" stroke-width="1"/>
+                                    <rect x="42" y="52" width="10" height="10" rx="2" fill="rgba(255,255,255,0.7)" stroke="rgba(97,14,135,0.12)" stroke-width="1"/>
+                                </svg>
+                            </div>
+                            <p class="study-infographic-tagline">Save Time. Use CourseQ</p>
+                        </div>
+                    </div>
+                    <div class="bento-content">
+                        <span class="feature-group-label">Study Planning</span>
+                        <h3>Syllabus to schedule in minutes</h3>
+                        <ul class="bento-tags">
+                            <li>Syllabus AI</li>
+                            <li>Assignments &amp; Calendar</li>
+                            <li>Study Plan &amp; Timer</li>
+                            <li>Flashcards</li>
+                            <li>Calendar &amp; LMS Sync</li>
+                            <li>Push Reminders</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Study Groups -->
+                <article class="bento-card bento-card--medium">
+                    <div class="bento-content">
+                        <span class="bento-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                        </span>
+                        <span class="feature-group-label">Study Groups</span>
+                        <h3>Collaborate course by course</h3>
+                        <ul class="bento-tags bento-tags--stack">
+                            <li>Course-Scoped Groups</li>
+                            <li>Exam Sprint Rooms</li>
+                            <li>Shared Flashcards</li>
+                            <li>Group Calendar &amp; Tracking</li>
+                            <li>Invite by QR or Link</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Campus Social -->
+                <article class="bento-card bento-card--compact">
+                    <div class="bento-content">
+                        <span class="bento-icon bento-icon--sm" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                        </span>
+                        <span class="feature-group-label">Campus Social</span>
+                        <h3>Find your people at your school</h3>
+                        <ul class="bento-tags bento-tags--stack">
+                            <li>Campus Hub</li>
+                            <li>Public Profiles</li>
+                            <li>Friends &amp; Follow</li>
+                            <li>Direct Messages</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Marketplace -->
+                <article class="bento-card bento-card--compact">
+                    <div class="bento-content">
+                        <span class="bento-icon bento-icon--sm" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 01-8 0"/></svg>
+                        </span>
+                        <span class="feature-group-label">Marketplace</span>
+                        <h3>Buy and sell on campus</h3>
+                        <ul class="bento-tags bento-tags--stack">
+                            <li>Peer-to-Peer Listings</li>
+                            <li>Campus-Wide Feed</li>
+                            <li>DM the Seller</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Clubs & Events -->
+                <article class="bento-card bento-card--compact">
+                    <div class="bento-content">
+                        <span class="bento-icon bento-icon--sm" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M12 14v4M10 16h4"/></svg>
+                        </span>
+                        <span class="feature-group-label">Clubs &amp; Events</span>
+                        <h3>Discover campus life</h3>
+                        <ul class="bento-tags bento-tags--stack">
+                            <li>Organizations</li>
+                            <li>Events</li>
+                            <li>Check-Ins</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Referrals & Pro -->
+                <article class="bento-card bento-card--split bento-card--compact">
+                    <div class="bento-split-inner">
+                        <div class="bento-split-col">
+                            <div class="bento-content">
+                                <span class="bento-icon bento-icon--sm" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+                                </span>
+                                <span class="feature-group-label">Referrals &amp; Rewards</span>
+                                <h3>Invite friends, earn perks</h3>
+                                <p class="bento-blurb">Climb the tier ladder — badges, syllabus bonuses, profile frames.</p>
+                            </div>
+                        </div>
+                        <div class="bento-split-col bento-split-col--pro">
+                            <div class="bento-content">
+                                <span class="bento-icon bento-icon--pro" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                </span>
+                                <span class="feature-group-label">CourseQ Pro</span>
+                                <h3>Go further with Pro</h3>
+                                <ul class="bento-tags bento-tags--stack">
+                                    <li>Advanced study &amp; backup</li>
+                                    <li>Local Pro backups</li>
+                                    <li>App Store / Play billing</li>
+                                    <li>Cancel anytime</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <section class="study-group" id="study-group">
-            <div class="study-group-inner">
-                <div class="study-group-head">
-                    <h2>Study Better Together</h2>
-                    <p>CourseQ Study Groups Keep Your Whole Class Aligned With Shared Tools Built For Team Accountability.</p>
+        <div class="divider"></div>
+
+        <!-- HOW IT WORKS -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="section-intro reveal">
+                <h2>How It <em>Works</em></h2>
+                <p>Four steps to your first Study Group.</p>
+            </div>
+            <div class="steps-flow reveal">
+                <ol class="steps-list reveal-stagger">
+                    <li class="step-card">
+                        <div class="step-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6M23 11h-6"/></svg>
+                        </div>
+                        <span class="step-num">1</span>
+                        <h3>Sign up</h3>
+                        <p>Apple or Google — pick your @username.</p>
+                    </li>
+                    <li class="step-card">
+                        <div class="step-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l8-4v18M13 21V3l6 3v15"/></svg>
+                        </div>
+                        <span class="step-num">2</span>
+                        <h3>Join Campus Hub</h3>
+                        <p>Pick your school — unlock campus features.</p>
+                    </li>
+                    <li class="step-card step-card--study">
+                        <div class="step-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                        </div>
+                        <span class="step-num">3</span>
+                        <h3>Upload &amp; plan</h3>
+                        <p>Parse your syllabus into a smart schedule.</p>
+                    </li>
+                    <li class="step-card">
+                        <div class="step-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                        </div>
+                        <span class="step-num">4</span>
+                        <h3>Connect &amp; go</h3>
+                        <p>Groups, Marketplace, events — all in one.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- SAFETY -->
+        <section class="safety" id="safety">
+            <div class="safety-inner reveal">
+                <div class="safety-copy">
+                    <div class="section-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h2>Safety &amp; <em>Community</em></h2>
+                    <p>Built for real campuses — respectful, honest, and campus-scoped.</p>
+                    <a class="safety-link" href="/community/">Community Guidelines →</a>
                 </div>
-                <div class="study-group-grid">
-                    <div class="group-card">
-                        <h3>Group Flashcards</h3>
-                        <p>Create And Review Shared Decks Together So Everyone Studies From The Same Material.</p>
-                    </div>
-                    <div class="group-card">
-                        <h3>Group Study Tracking</h3>
-                        <p>Track Progress Across Your Group And Keep Each Other Accountable Before Key Exams.</p>
-                    </div>
-                    <div class="group-card">
-                        <h3>Group Course Calendar</h3>
-                        <p>Use One Shared Calendar For Your Specific Course With Deadlines And Study Sessions Synced For Everyone.</p>
-                    </div>
-                    <div class="group-card">
-                        <h3>Invite By QR Or Link</h3>
-                        <p>Join Instantly By Scanning A QR Code Or Sharing A Textable Invite Link With Your Friends.</p>
-                    </div>
-                </div>
+                <ul class="safety-grid">
+                    <li>
+                        <span class="safety-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l8-4v18M13 21V3l6 3v15"/></svg></span>
+                        <strong>Campus-scoped</strong>
+                        <span>Social stays at your school</span>
+                    </li>
+                    <li>
+                        <span class="safety-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
+                        <strong>Peer-to-peer</strong>
+                        <span>Meet safely in public places</span>
+                    </li>
+                    <li>
+                        <span class="safety-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></span>
+                        <strong>Verify deadlines</strong>
+                        <span>AI is a helper, not gospel</span>
+                    </li>
+                    <li>
+                        <span class="safety-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg></span>
+                        <strong>Report issues</strong>
+                        <span><a href="mailto:support@course-q.com">support@course-q.com</a></span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- FAQ -->
+        <section class="faq" id="faq">
+            <div class="section-intro reveal">
+                <h2>FAQ</h2>
+            </div>
+            <div class="faq-list reveal-stagger">
+                <details class="faq-item">
+                    <summary>Is CourseQ an official university system?</summary>
+                    <p>No — CourseQ is not an official school record. You choose what to upload. See our Privacy Policy for FERPA details.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Does CourseQ handle Marketplace payments?</summary>
+                    <p>No. Transactions are directly between students. CourseQ is not a broker, escrow, or payment processor.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I trust the syllabus parser?</summary>
+                    <p>It's a planning tool — always verify against your official syllabus and instructor.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How does CourseQ Pro billing work?</summary>
+                    <p>Billed via App Store or Google Play through RevenueCat. Cancel in store settings 24h before renewal.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I delete my account?</summary>
+                    <p>Yes — use in-app deletion. Some backup logs may be retained per our Privacy Policy.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Why is my username permanent?</summary>
+                    <p>Usernames stay fixed after registration for referrals, mentions, and campus identity.</p>
+                </details>
             </div>
         </section>
 
         <!-- LEGAL -->
         <section id="legal">
             <div class="legal">
-                <div class="legal-intro">
+                <div class="legal-intro reveal">
                     <h2>Our Policies</h2>
-                    <p>We Believe In Being Straightforward About How CourseQ Works And What We Do With Your Information. Read Our Full Policies Below.</p>
+                    <p>Privacy, terms, and community standards.</p>
                 </div>
-                <div class="legal-cards">
+                <div class="legal-cards reveal-stagger">
                     <a href="/privacy/" class="legal-card">
+                        <span class="legal-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                        </span>
                         <div class="legal-card-left">
                             <h3>Privacy Policy</h3>
-                            <p>What Data We Collect, How We Use It, And Your Rights As A User.</p>
+                            <p>Data collection, use, and your rights.</p>
                         </div>
-                        <span class="legal-arrow">→</span>
+                        <span class="legal-arrow" aria-hidden="true">→</span>
                     </a>
                     <a href="/terms/" class="legal-card">
+                        <span class="legal-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+                        </span>
                         <div class="legal-card-left">
                             <h3>Terms of Service</h3>
-                            <p>The Rules Of Using CourseQ And What You Can Expect From Us.</p>
+                            <p>Accounts, content, marketplace, and subscriptions.</p>
                         </div>
-                        <span class="legal-arrow">→</span>
+                        <span class="legal-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <a href="/community/" class="legal-card">
+                        <span class="legal-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                        </span>
+                        <div class="legal-card-left">
+                            <h3>Community Guidelines</h3>
+                            <p>Stay respectful, safe, and honest.</p>
+                        </div>
+                        <span class="legal-arrow" aria-hidden="true">→</span>
                     </a>
                 </div>
             </div>
@@ -205,182 +464,148 @@
 
         <!-- CONTACT -->
         <section class="contact" id="contact">
-            <div class="contact-inner">
+            <div class="contact-inner reveal">
                 <div class="contact-left">
-                    <h2>Questions Before You<br /><em>Download?</em></h2>
-                    <p>Send Us A Message For Support, Partnerships, Or Feedback And Our Team Will Follow Up As Quickly As Possible.</p>
+                    <h2>Get in <em>Touch</em></h2>
+                    <p>Support, partnerships, or feedback — we reply within 48 hours.</p>
                     <div class="contact-detail">
-                        <a href="mailto:support@course-q.com">support@course-q.com</a>
-                        <p>Email Us Directly</p>
-
-                        <a href="https://www.instagram.com/courseqdevs/">@courseqdevs</a>
-                        <p>Find Us On Instagram</p>
+                        <div class="contact-channel">
+                            <span class="contact-channel-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                            </span>
+                            <a href="mailto:support@course-q.com">support@course-q.com</a>
+                            <p>Support, reporting &amp; privacy requests</p>
+                        </div>
                     </div>
                 </div>
                 <div>
                     <div class="contact-form" id="contactForm">
                         <div class="form-row">
                             <div>
-                                <label>Name</label>
-                                <input type="text" id="fName" placeholder="Your Name" />
+                                <label for="fName">Name</label>
+                                <input type="text" id="fName" placeholder="Your name" autocomplete="name" />
                             </div>
                             <div>
-                                <label>Email</label>
-                                <input type="email" id="fEmail" placeholder="Your@Email.com" />
+                                <label for="fEmail">Email</label>
+                                <input type="email" id="fEmail" placeholder="you@school.edu" autocomplete="email" />
                             </div>
                         </div>
                         <div>
-                            <label>Subject</label>
+                            <label for="fSubject">Subject</label>
                             <select id="fSubject">
-                                <option value="">Select A Topic</option>
-                                <option>General Inquiry</option>
-                                <option>App Support</option>
+                                <option value="">Select a topic</option>
+                                <option>General inquiry</option>
+                                <option>App support</option>
                                 <option>Feedback</option>
-                                <option>Privacy / Data</option>
+                                <option>Privacy / data</option>
                                 <option>Partnership</option>
                                 <option>Other</option>
                             </select>
                         </div>
                         <div>
-                            <label>Message</label>
-                            <textarea id="fMessage" placeholder="Tell Us What's On Your Mind…"></textarea>
+                            <label for="fMessage">Message</label>
+                            <textarea id="fMessage" placeholder="Tell us what's on your mind…"></textarea>
                         </div>
-                        <button class="btn-send" onclick="sendForm()">Contact CourseQ</button>
+                        <button class="btn-send" type="button" onclick="sendForm()">Contact CourseQ</button>
                     </div>
                     <div class="sent-msg" id="sentMsg">
-                        <p>Message Received - Thanks For Reaching Out.</p>
-                        <small>We'll Reply Within 48 Hours.</small>
+                        <p>Message received — thanks for reaching out.</p>
+                        <small>We'll reply within 48 hours.</small>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FOOTER -->
         <footer>
-            <br />
-            <div class="footer-links">
-                <a href="/privacy/">Privacy Policy</a>
-                <a href="/terms/">Terms of Service</a>
-                <a href="#contact">Contact</a>
+            <div class="footer-left">
+                <a class="footer-logo" href="/"><img src="logo.png" alt="CourseQ" /></a>
+                <div class="footer-links">
+                    <a href="/privacy/">Privacy Policy</a>
+                    <a href="/terms/">Terms of Service</a>
+                    <a href="/community/">Community Guidelines</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
-            <span class="footer-copy">© 2025 CourseQ</span>
+            <div class="footer-right">
+                <div class="social-links social-links--footer">
+                    <a href="https://www.instagram.com/courseqdevs/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Follow CourseQ on Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/share/1SZHM7Wkpw/?mibextid=wwXIfr" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Follow CourseQ on Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                </div>
+                <span class="footer-copy">© 2026 CourseQ · Quast Ventures</span>
+            </div>
         </footer>
 
-        <div class="modal-wrap" id="modal-pp">
-            <div class="modal-box">
-                <button class="modal-close-btn" onclick="closeModal('pp')">✕</button>
-                <h2>Privacy Policy</h2>
-                <p class="modal-updated">Last updated April 27, 2026</p>
-
-                <p>
-                    Quast Ventures LLC ("the Company", "we", "us", or "our") operates the CourseQ mobile application and website (the "Service"). We are
-                    committed to protecting your privacy and ensuring you understand how your data is handled. 1. OUR "LOCAL-FIRST" PRIVACY PHILOSOPHY Unlike
-                    traditional cloud-based applications, our Service is designed with a "Local-First" architecture. We believe that your academic data belongs
-                    to you. We do not store your course content, syllabi, or any other applied study materials on our servers. 2. INFORMATION COLLECTION AND
-                    STORAGE Because the Service operates primarily on your local device, our data handling practices are as follows: Local Storage: All data you
-                    input, upload, or generate—including uploaded syllabi (PDFs/Images), parsed course schedules, AI-generated summaries, and flashcards—is
-                    stored locally on your device or within your private personal cloud storage (such as iCloud or Google Drive) linked to your device account.
-                    No Central Database: We do not maintain a central database of your academic materials. We cannot access, read, or sell your syllabi or
-                    flashcards because we do not possess them. AI Processing: To provide the "AI Syllabus Assistant" features, the Service transmits document
-                    text to third-party AI processors (such as OpenAI). This data is transmitted securely and is used solely to parse and organize your
-                    syllabus. It is not retained by us after the processing is complete. 3. USE OF INFORMATION Since we do not collect your personal academic
-                    data on our servers, we do not use it for marketing or profiling. Any data processed locally or via API is used strictly to: Extract dates,
-                    assignments, and grade weights from your uploaded documents. Generate flashcards and study aids based on your specific requests. Maintain
-                    the functionality of the Service on your local device. 4. DATA SECURITY Because your data is stored locally, the security of your
-                    information depends on the security of your hardware and your personal cloud accounts. User Responsibility: You are responsible for
-                    maintaining the security of your device (using passcodes or biometrics) and your linked accounts (using strong passwords and two-factor
-                    authentication). Unauthorized Access: As stated in our Terms of Service, the Company is not responsible for unauthorized access resulting
-                    from the hacking, tampering, or loss of your personal device. 5. THIRD-PARTY SERVICES Our Service utilizes third-party APIs (such as AI
-                    processing engines). We are not responsible for the privacy practices of these external entities. We encourage you to review the privacy
-                    policies of any third-party service providers used by the app such as third-party calendars or OpenAI. 6. CHILDREN'S PRIVACY The Service is
-                    intended for use by students in higher education. We do not knowingly collect personal information from children under the age of 13. If you
-                    believe a child has provided us with personal information, please contact us immediately. To support optional Study Group collaboration
-                    features, CourseQ may store limited collaboration data in our secure backend (Supabase). This includes group membership, shared course items
-                    (such as assignments and due dates), group task progress signals, shared flashcard deck content, and group study timer logs needed to keep
-                    members in sync across devices. We do not sell your data. Collaboration data is used only to operate collaboration features you choose to
-                    use, and is protected with industry-standard safeguards, including encryption in transit and at rest where supported by our providers.
-                    Access to collaboration records is restricted to authenticated group members and authorized service operations. Core personal app usage
-                    remains privacy-first. Features that are local-only (for example, non-group personal workflows) continue to stay on your device unless you
-                    explicitly use a collaboration feature that requires syncing. If you do not join or create a Study Group, collaboration storage is not used
-                    for your account. You can leave a group at any time. When collaboration data is no longer needed, you may request deletion of your
-                    collaboration records, and we will process deletion in accordance with applicable law and our retention requirements. 7. CHANGES TO THIS
-                    PRIVACY POLICY We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on
-                    this page and updating the "Last Updated" date at the top of this policy. 8. CONTACT US If you have any questions about this Privacy Policy,
-                    please contact us at: Support@Course-Q.com
-                </p>
-            </div>
-        </div>
-
-        <div class="modal-wrap" id="modal-tos">
-            <div class="modal-box">
-                <button class="modal-close-btn" onclick="closeModal('tos')">✕</button>
-                <h2>Terms of Service</h2>
-                <p class="modal-updated">Last updated April 21, 2026</p>
-
-                <p>
-                    Please read these Terms of Service ("Terms") carefully before using CourseQ (the "Service"), operated by Quast Ventures LLC ("Company,"
-                    "we," "us," or "our"). By accessing the Service, you agree to be bound by these Terms. The Service is intended for personal, organizational
-                    use only. Users represent and warrant that they have the necessary permissions to upload documents for the purpose of personal scheduling.
-                    CourseQ does not claim any ownership over uploaded content and does not use such content for any purpose other than providing the requested
-                    output to the User All extracted data and calendar entries generated by the Service are the property of the User. Quast Ventures LLC claims
-                    no rights or royalties over the schedules created using our tools. 1. AI-Powered Data Extraction & Accuracy Disclaimer The Service utilizes
-                    artificial intelligence to parse and extract schedule information from uploaded documents (Syllabi, notes, and other applicable
-                    information). No Guarantee of Accuracy: We do not guarantee 100% accuracy of parsed data. AI may misinterpret dates, times, or text. User
-                    Responsibility: You are solely responsible for verifying all parsed dates, deadlines, and schedule information against your official
-                    syllabus. No Academic Liability: CourseQ is not responsible for any academic penalties, missed exams, late assignments, or failing grades
-                    resulting from errors in data extraction. 2. One-Way Calendar Synchronization The Service offers a feature to export data to third-party
-                    calendar applications (e.g., Google Calendar, Microsoft Outlook). One-Way Push: Synchronization is a one-way transfer. Changes made in the
-                    Service after a sync will not automatically update or delete entries in your external calendar. Duplicate Entries: We are not liable for the
-                    creation of duplicate calendar entries. It is your responsibility to manage and clean your external calendar. Data Modification: By using
-                    the "Syllabus Upload" feature, you grant the Service permission to write events to your connected third-party calendar. We are not liable
-                    for unintended deletions or modifications to your existing calendar data. 3. Paid Services & Subscriptions Access to certain features,
-                    including calendar synchronization, requires a paid subscription. "As-Is" Service: Payment for "Premium" features does not guarantee
-                </p>
-                <p>
-                    error-free parsing. You are paying for access to automation tools, not a guarantee of academic oversight. Service Interruption: We rely on
-                    third-party APIs (Google/Microsoft). We are not liable for "silent failures" or downtime caused by these third-party providers. Refund
-                    Policy: All sales are final. Refunds for service interruptions are granted at our sole discretion. 4. Limitation of Liability (The Liability
-                    Cap) To the maximum extent permitted by law, in no event shall Quast Ventures LLC be liable for any indirect, incidental, or consequential
-                    damages. Financial Cap: Our total liability for any claim arising out of your use of the Service—whether free or paid—shall not exceed the
-                    total amount paid by you to the Company immediately preceding the claim. 5. Data Privacy & Zero-Retention Policy Non-Retention: Our Service
-                    is built on a non-retention framework. We do not store, host, or keep copies of uploaded syllabi. Once the AI parsing is finalized and the
-                    data is presented to the user, the uploaded file is permanently deleted from our temporary processing memory. No Training: We do not use
-                    your data, syllabi, or schedules to train our AI models or for any secondary commercial purpose. User Responsibility: Because we do not
-                    store your documents, Quast Ventures LLC cannot 'recover' a lost syllabus for you. It is your responsibility to maintain your own copies of
-                    all academic materials. All materials presented by CourseQ functionality are subject to our DMCA Takedown Policy 6. Mandatory Arbitration &
-                    Governing Law Governing Law: These Terms shall be governed by the laws of the State of Arkansas, without regard to its conflict of law
-                    provisions. Dispute Resolution: Any dispute arising from these terms shall be resolved through binding arbitration in Hot Springs, Arkansas.
-                    You waive your right to participate in a class-action lawsuit. 7. Acknowledgment BY CLICKING "I AGREE" OR BY UPLOADING A SYLLABUS, YOU
-                    ACKNOWLEDGE THAT YOU HAVE READ THESE TERMS AND AGREE TO BE BOUND BY THEM, SPECIFICALLY ACKNOWLEDGING THAT THE FINAL RESPONSIBILITY FOR
-                    ACADEMIC DEADLINES RESTS WITH YOU, THE USER.
-                </p>
-            </div>
-        </div>
-
         <script>
-            function openModal(id) {
-                document.getElementById("modal-" + id).classList.add("open");
-                document.body.style.overflow = "hidden";
-            }
-            function closeModal(id) {
-                document.getElementById("modal-" + id).classList.remove("open");
-                document.body.style.overflow = "";
-            }
-            document.querySelectorAll(".modal-wrap").forEach((el) => {
-                el.addEventListener("click", (e) => {
-                    if (e.target === el) {
-                        el.classList.remove("open");
-                        document.body.style.overflow = "";
-                    }
+            (function () {
+                const nav = document.querySelector("nav");
+                if (nav) {
+                    window.addEventListener(
+                        "scroll",
+                        function () {
+                            nav.classList.toggle("nav-scrolled", window.scrollY > 24);
+                        },
+                        { passive: true }
+                    );
+                }
+
+                const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+                const revealEls = document.querySelectorAll(".reveal, .reveal-stagger");
+                if (reducedMotion) {
+                    revealEls.forEach(function (el) {
+                        el.classList.add("visible");
+                    });
+                } else if (revealEls.length && "IntersectionObserver" in window) {
+                    const observer = new IntersectionObserver(
+                        function (entries) {
+                            entries.forEach(function (entry) {
+                                if (entry.isIntersecting) {
+                                    entry.target.classList.add("visible");
+                                    observer.unobserve(entry.target);
+                                }
+                            });
+                        },
+                        { threshold: 0.1, rootMargin: "0px 0px -48px 0px" }
+                    );
+                    revealEls.forEach(function (el) {
+                        observer.observe(el);
+                    });
+                } else {
+                    revealEls.forEach(function (el) {
+                        el.classList.add("visible");
+                    });
+                }
+
+                const toggle = document.querySelector(".nav-toggle");
+                const menu = document.querySelector(".nav-links");
+                if (!toggle || !menu) return;
+                toggle.addEventListener("click", function () {
+                    const open = menu.classList.toggle("open");
+                    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+                    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
                 });
-            });
+                menu.querySelectorAll("a").forEach(function (link) {
+                    link.addEventListener("click", function () {
+                        menu.classList.remove("open");
+                        toggle.setAttribute("aria-expanded", "false");
+                        toggle.setAttribute("aria-label", "Open menu");
+                    });
+                });
+            })();
 
             function sendForm() {
                 const name = document.getElementById("fName").value.trim();
                 const email = document.getElementById("fEmail").value.trim();
                 const msg = document.getElementById("fMessage").value.trim();
                 if (!name || !email || !msg) {
-                    alert("Please Fill In Your Name, Email, And Message.");
+                    alert("Please fill in your name, email, and message.");
                     return;
                 }
                 document.getElementById("contactForm").style.display = "none";
@@ -393,13 +618,12 @@
                         msg: msg,
                     })
                     .then(() => {
-                        alert("Message Sent Successfully!");
+                        alert("Message sent successfully!");
                     })
                     .catch((error) => {
-                        alert("Failed To Send Message: " + error);
+                        alert("Failed to send message: " + error);
                     });
             }
-
         </script>
     </body>
 </html>
